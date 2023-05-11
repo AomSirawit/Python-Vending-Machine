@@ -35,19 +35,19 @@ def display_menu():
 def display_tea_menu():
     print("Tea Menu")
     for key, item in tea_menu.items():
-        print(key + " - " + item['name'] + " ($" + str(item['price']) + ")")
+        print(key + " - " + item['name'] + " (" + str(item['price']) + " ฿)")
 
 # Display coffee menu
 def display_coffee_menu():
     print("Coffee Menu")
     for key, item in coffee_menu.items():
-        print(key + " - " + item['name'] + " ($" + str(item['price']) + ")")
+        print(key + " - " + item['name'] + " (" + str(item['price']) + " ฿)")
 
 # Display soft drink menu
 def display_soft_drink_menu():
     print("Soft Drink Menu")
     for key, item in soft_drink_menu.items():
-        print(key + " - " + item['name'] + " ($" + str(item['price']) + ")")
+        print(key + " - " + item['name'] + " (" + str(item['price']) + " ฿)")
 
 # Process menu selection
 def process_menu_selection(selection):
@@ -72,14 +72,14 @@ def process_tea_selection(selection):
     if item:
         print("You have selected:", item['name'])
         amount_due = item['price']
-        amount_paid = float(input("Please insert money ($" + str(amount_due) + "): "))
+        amount_paid = float(input("Please insert money (" + str(amount_due) + " ฿): "))
         if amount_paid < amount_due:
             print("Invalid amount. Try again.")
         else:
             change = amount_paid - amount_due
             print("Thank you for your purchase!")
             if change > 0:
-                print("Your change: $" + str(change))
+                print("Your change: (" + str(change) + " ฿)")
     else:
         print("Invalid selection. Try again.")
 
@@ -89,14 +89,14 @@ def process_coffee_selection(selection):
     if item:
         print("You have selected:", item['name'])
         amount_due = item['price']
-        amount_paid = float(input("Please insert money ($" + str(amount_due) + "): "))
+        amount_paid = float(input("Please insert money (" + str(amount_due) + " ฿): "))
         if amount_paid < amount_due:
             print("Invalid amount. Try again.")
         else:
             change = amount_paid - amount_due
             print("Thank you for your purchase!")
             if change > 0:
-                print("Your change: $" + str(change))
+                print("Your change: (" + str(change) + " ฿)")
     else:
         print("Invalid selection. Try again.")
 
@@ -106,14 +106,14 @@ def process_soft_drink_selection(selection):
     if item:
         print("You have selected:", item['name'])
         amount_due = item['price']
-        amount_paid = float(input("Please insert money ($" + str(amount_due) + "): "))
+        amount_paid = float(input("Please insert money (" + str(amount_due) + " ฿): "))
         if amount_paid < amount_due:
             print("Invalid amount. Try again.")
         else:
             change = amount_paid - amount_due
             print("Thank you for your purchase!")
             if change > 0:
-                print("Your change: $" + str(change))
+                print("Your change: (" + str(change) + " ฿)")
     else:
         print("Invalid selection. Try again.")
 
